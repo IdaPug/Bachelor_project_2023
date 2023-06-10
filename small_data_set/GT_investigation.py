@@ -120,7 +120,7 @@ for i in range(ig.channels):
     myFISTATV_2D_FGP = FISTA(f=f1, 
                 g=TV, 
                 initial=ig2D.allocate(0) ,
-                max_iteration=100, 
+                max_iteration=200, 
                 update_objective_interval = 10)
     myFISTATV_2D_FGP.run(200,verbrose=1)
     recon_data.fill(myFISTATV_2D_FGP.solution,channel=i)
